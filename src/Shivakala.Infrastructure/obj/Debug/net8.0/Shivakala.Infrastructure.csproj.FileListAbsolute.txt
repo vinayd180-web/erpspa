@@ -1,0 +1,17 @@
+/root/ERP/src/Shivakala.Infrastructure/bin/Debug/net8.0/Shivakala.Infrastructure.deps.json
+/root/ERP/src/Shivakala.Infrastructure/bin/Debug/net8.0/Shivakala.Infrastructure.runtimeconfig.json
+/root/ERP/src/Shivakala.Infrastructure/bin/Debug/net8.0/Shivakala.Infrastructure.dll
+/root/ERP/src/Shivakala.Infrastructure/bin/Debug/net8.0/Shivakala.Infrastructure.pdb
+/root/ERP/src/Shivakala.Infrastructure/bin/Debug/net8.0/Shivakala.Core.dll
+/root/ERP/src/Shivakala.Infrastructure/bin/Debug/net8.0/Shivakala.Core.pdb
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.csproj.AssemblyReference.cache
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.AssemblyInfoInputs.cache
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.AssemblyInfo.cs
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.csproj.CoreCompileInputs.cache
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakal.62F62953.Up2Date
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.dll
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/refint/Shivakala.Infrastructure.dll
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.pdb
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.genruntimeconfig.cache
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/ref/Shivakala.Infrastructure.dll

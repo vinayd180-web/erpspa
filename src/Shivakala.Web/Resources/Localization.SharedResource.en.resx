@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+
+  <!-- Navigation -->
+  <data name="NavHome"><value>Home</value></data>
+  <data name="NavAbout"><value>About Us</value></data>
+  <data name="NavCourses"><value>Courses</value></data>
+  <data name="NavRegistration"><value>Register</value></data>
+  <data name="NavEnquiry"><value>Enquiry</value></data>
+  <data name="NavContact"><value>Contact Us</value></data>
+  <data name="NavAdmin"><value>Admin</value></data>
+  <data name="LanguageSwitcher"><value>मराठी</value></data>
+
+  <!-- Hero -->
+  <data name="HeroAdmissionsOpen"><value>Admissions Open</value></data>
+  <data name="HeroYear"><value>2026 – 27</value></data>
+  <data name="HeroStandard"><value>KG1 TO 10TH STANDARD</value></data>
+  <data name="HeroTagline"><value>Strong Foundation Today, </value></data>
+  <data name="HeroTaglineAccent"><value>Brilliant Success Tomorrow!</value></data>
+  <data name="AdmissionNow"><value>Apply for Admission</value></data>
+  <data name="EnquireNow"><value>Enquire Now</value></data>
+
+  <!-- Info boxes -->
+  <data name="WeeklyTestEvery"><value>WEEKLY TEST EVERY</value></data>
+  <data name="Saturday"><value>SATURDAY</value></data>
+  <data name="ResultMeritEvery"><value>RESULT &amp; MERIT LIST EVERY</value></data>
+  <data name="Sunday"><value>SUNDAY</value></data>
+  <data name="QuestionPaperInfo"><value>QUESTION PAPER &amp; ANSWER SHEET</value></data>
+  <data name="WillBeUploaded"><value>WILL BE UPLOADED</value></data>
+
+  <!-- Quick Actions -->
+  <data name="QuickActions"><value>Quick Actions</value></data>
+  <data name="ApplyAdmission"><value>Apply for Admission</value></data>
+  <data name="DownloadQPaper"><value>Download Question Paper</value></data>
+  <data name="DownloadAnswer"><value>Download Answer Sheet</value></data>
+  <data name="WeeklyTestResult"><value>Weekly Test Result</value></data>
+  <data name="MeritRankList"><value>Merit Rank List</value></data>
+  <data name="BookDemoClass"><value>Book Free Demo Class</value></data>
+  <data name="ContactUs"><value>Contact Us</value></data>
+
+  <!-- Features bar -->
+  <data name="RegularTests"><value>Regular Tests</value></data>
+  <data name="ConceptLearning"><value>Concept Based Learning</value></data>
+  <data name="ExperiencedFaculty"><value>Experienced Faculty</value></data>
+  <data name="PersonalAttention"><value>Personal Attention</value></data>
+  <data name="BetterResults"><value>Better Results</value></data>
+
+  <!-- Footer -->
+  <data name="FooterSummary"><value>Shivakala Coaching Classes provides quality coaching for KG1 to 10th Standard students in Chikhali, Maharashtra. SK Learning For Life.</value></data>
+  <data name="QuickLinks"><value>Quick Links</value></data>
+  <data name="FooterRights"><value>All Rights Reserved</value></data>
+
+  <!-- Forms -->
+  <data name="FullName"><value>Student's Full Name</value></data>
+  <data name="ParentName"><value>Parent / Guardian Name</value></data>
+  <data name="Mobile"><value>Mobile Number</value></data>
+  <data name="Email"><value>Email Address</value></data>
+  <data name="Standard"><value>Standard</value></data>
+  <data name="Subject"><value>Subject</value></data>
+  <data name="Address"><value>Address</value></data>
+  <data name="Message"><value>Message / Query</value></data>
+  <data name="SubmitRegistration"><value>Submit Registration</value></data>
+  <data name="SendEnquiry"><value>Send Enquiry</value></data>
+
+  <!-- Sanskrit motto -->
+  <data name="SanskritMotto"><value>॥ Gyanadeepah Prajvalitah ॥</value></data>
+</root>

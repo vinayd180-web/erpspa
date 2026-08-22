@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+
+  <!-- Navigation -->
+  <data name="NavHome"><value>मुख्यपृष्ठ</value></data>
+  <data name="NavAbout"><value>आमच्याबद्दल</value></data>
+  <data name="NavCourses"><value>अभ्यासक्रम</value></data>
+  <data name="NavRegistration"><value>नोंदणी</value></data>
+  <data name="NavEnquiry"><value>चौकशी</value></data>
+  <data name="NavContact"><value>संपर्क करा</value></data>
+  <data name="NavAdmin"><value>प्रशासक</value></data>
+  <data name="LanguageSwitcher"><value>English</value></data>
+
+  <!-- Hero -->
+  <data name="HeroAdmissionsOpen"><value>प्रवेश सुरू आहेत</value></data>
+  <data name="HeroYear"><value>२०२६ – २७</value></data>
+  <data name="HeroStandard"><value>KG1 ते 10 वी इयत्ता</value></data>
+  <data name="HeroTagline"><value>भक्कम पाया आज, </value></data>
+  <data name="HeroTaglineAccent"><value>उज्ज्वल यश उद्या!</value></data>
+  <data name="AdmissionNow"><value>प्रवेश अर्ज करा</value></data>
+  <data name="EnquireNow"><value>चौकशी करा</value></data>
+
+  <!-- Info boxes -->
+  <data name="WeeklyTestEvery"><value>साप्ताहिक चाचणी</value></data>
+  <data name="Saturday"><value>शनिवार</value></data>
+  <data name="ResultMeritEvery"><value>निकाल व गुणवत्ता यादी</value></data>
+  <data name="Sunday"><value>रविवार</value></data>
+  <data name="QuestionPaperInfo"><value>प्रश्नपत्रिका व उत्तरपत्रिका</value></data>
+  <data name="WillBeUploaded"><value>अपलोड केले जाईल</value></data>
+
+  <!-- Quick Actions -->
+  <data name="QuickActions"><value>त्वरित क्रिया</value></data>
+  <data name="ApplyAdmission"><value>प्रवेश अर्ज करा</value></data>
+  <data name="DownloadQPaper"><value>प्रश्नपत्रिका डाउनलोड</value></data>
+  <data name="DownloadAnswer"><value>उत्तरपत्रिका डाउनलोड</value></data>
+  <data name="WeeklyTestResult"><value>साप्ताहिक निकाल</value></data>
+  <data name="MeritRankList"><value>गुणवत्ता यादी</value></data>
+  <data name="BookDemoClass"><value>मोफत डेमो बुक करा</value></data>
+  <data name="ContactUs"><value>संपर्क करा</value></data>
+
+  <!-- Features bar -->
+  <data name="RegularTests"><value>नियमित चाचण्या</value></data>
+  <data name="ConceptLearning"><value>संकल्पना आधारित शिक्षण</value></data>
+  <data name="ExperiencedFaculty"><value>अनुभवी शिक्षक</value></data>
+  <data name="PersonalAttention"><value>वैयक्तिक लक्ष</value></data>
+  <data name="BetterResults"><value>उत्तम निकाल</value></data>
+
+  <!-- Footer -->
+  <data name="FooterSummary"><value>शिवकला क्लासेस, चिखली, महाराष्ट्र — KG1 ते 10वी इयत्तेच्या विद्यार्थ्यांसाठी दर्जेदार शिक्षण. SK लर्निंग फॉर लाइफ.</value></data>
+  <data name="QuickLinks"><value>जलद दुवे</value></data>
+  <data name="FooterRights"><value>सर्व हक्क राखीव</value></data>
+
+  <!-- Forms -->
+  <data name="FullName"><value>विद्यार्थ्याचे पूर्ण नाव</value></data>
+  <data name="ParentName"><value>पालकाचे नाव</value></data>
+  <data name="Mobile"><value>मोबाईल नंबर</value></data>
+  <data name="Email"><value>ईमेल पत्ता</value></data>
+  <data name="Standard"><value>इयत्ता</value></data>
+  <data name="Subject"><value>विषय</value></data>
+  <data name="Address"><value>पत्ता</value></data>
+  <data name="Message"><value>संदेश / प्रश्न</value></data>
+  <data name="SubmitRegistration"><value>अर्ज सादर करा</value></data>
+  <data name="SendEnquiry"><value>चौकशी पाठवा</value></data>
+
+  <!-- Sanskrit motto -->
+  <data name="SanskritMotto"><value>॥ ज्ञानदीपः प्रज्वलितः ॥</value></data>
+</root>

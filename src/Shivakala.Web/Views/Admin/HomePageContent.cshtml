@@ -1,0 +1,234 @@
+@model Shivakala.Core.ViewModels.HomePageContentAdminViewModel
+@{
+    ViewData["Title"] = "Homepage Content | Admin";
+}
+
+<section class="page-hero" style="background:linear-gradient(135deg,var(--navy-dark),var(--green))">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+            <span class="badge-soft">Admin</span>
+            <h1>Homepage Content</h1>
+            <p>Control the stats strip and testimonials section shown on the home page.</p>
+        </div>
+        <a asp-action="Testimonials" class="toolbar-btn"><i class="fa-solid fa-star"></i>Manage Testimonials</a>
+    </div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="container" style="max-width:980px">
+        @if (TempData["SuccessMessage"] is string msg)
+        {
+            <div class="alert alert-success">@msg</div>
+        }
+        @if (ViewBag.ContentSettingsWarning is string warning)
+        {
+            <div class="alert alert-warning">@warning</div>
+        }
+        <form asp-action="HomePageContent" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="All" class="text-danger small mb-3"></div>
+
+            <div class="glass-card mb-4">
+                <div class="mb-3">
+                    <h3 style="margin:0;color:var(--navy)">Hero Banner</h3>
+                    <p style="margin:4px 0 0;color:var(--text-mid)">Replace the main homepage image without editing files on the server.</p>
+                </div>
+
+                <div class="row g-3 align-items-start">
+                    <div class="col-lg-5">
+                        <label class="form-label">Current Hero Image</label>
+                        <div class="border rounded-4 overflow-hidden bg-light">
+                            <img src="@Model.CurrentHeroBannerImageUrl" alt="@Model.HeroBannerAltText" style="width:100%;display:block;max-height:260px;object-fit:cover" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="mb-3">
+                            <label class="form-label">Upload New Hero Banner</label>
+                            <input type="file" name="heroBannerImage" class="form-control" accept=".jpg,.jpeg,.png,.webp,.gif" />
+                        </div>
+                        <div>
+                            <label asp-for="HeroBannerAltText" class="form-label">Hero Image Alt Text</label>
+                            <input asp-for="HeroBannerAltText" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                    <div>
+                        <h3 style="margin:0;color:var(--navy)">Trending Banner</h3>
+                        <p style="margin:4px 0 0;color:var(--text-mid)">Promote batches, admissions, events, results, or any urgent update from the admin panel.</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input asp-for="ShowTrendingBanner" class="form-check-input" type="checkbox" id="showTrendingBanner" />
+                        <label class="form-check-label" for="showTrendingBanner">Show on homepage</label>
+                    </div>
+                </div>
+                <div class="row g-3 align-items-start">
+                    <div class="col-lg-5">
+                        <label class="form-label">Current Trending Image</label>
+                        <div class="border rounded-4 overflow-hidden bg-light">
+                            <img src="@Model.CurrentTrendingImageUrl" alt="@Model.TrendingAltText" style="width:100%;display:block;max-height:260px;object-fit:cover" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="mb-3">
+                            <label class="form-label">Upload Trending Image</label>
+                            <input type="file" name="trendingBannerImage" class="form-control" accept=".jpg,.jpeg,.png,.webp,.gif" />
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="TrendingEyebrow" class="form-label">Eyebrow (English)</label>
+                                <input asp-for="TrendingEyebrow" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingEyebrowMarathi" class="form-label">Eyebrow (Marathi)</label>
+                                <input asp-for="TrendingEyebrowMarathi" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingTitle" class="form-label">Title (English)</label>
+                                <input asp-for="TrendingTitle" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingTitleMarathi" class="form-label">Title (Marathi)</label>
+                                <input asp-for="TrendingTitleMarathi" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingDescription" class="form-label">Description (English)</label>
+                                <textarea asp-for="TrendingDescription" class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingDescriptionMarathi" class="form-label">Description (Marathi)</label>
+                                <textarea asp-for="TrendingDescriptionMarathi" class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingLinkText" class="form-label">Button Text (English)</label>
+                                <input asp-for="TrendingLinkText" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingLinkTextMarathi" class="form-label">Button Text (Marathi)</label>
+                                <input asp-for="TrendingLinkTextMarathi" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingLinkUrl" class="form-label">Button Link URL</label>
+                                <input asp-for="TrendingLinkUrl" class="form-control" placeholder="/registration" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrendingAltText" class="form-label">Trending Image Alt Text</label>
+                                <input asp-for="TrendingAltText" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                    <div>
+                        <h3 style="margin:0;color:var(--navy)">Stats Section</h3>
+                        <p style="margin:4px 0 0;color:var(--text-mid)">Edit the four numbers shown below the "Why Choose Us" section.</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input asp-for="ShowStatisticsSection" class="form-check-input" type="checkbox" id="showStatisticsSection" />
+                        <label class="form-check-label" for="showStatisticsSection">Show on homepage</label>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Stat 1 Value</label>
+                        <input asp-for="Stat1Value" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (English)</label>
+                        <input asp-for="Stat1Label" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (Marathi)</label>
+                        <input asp-for="Stat1LabelMarathi" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Stat 2 Value</label>
+                        <input asp-for="Stat2Value" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (English)</label>
+                        <input asp-for="Stat2Label" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (Marathi)</label>
+                        <input asp-for="Stat2LabelMarathi" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Stat 3 Value</label>
+                        <input asp-for="Stat3Value" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (English)</label>
+                        <input asp-for="Stat3Label" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (Marathi)</label>
+                        <input asp-for="Stat3LabelMarathi" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Stat 4 Value</label>
+                        <input asp-for="Stat4Value" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (English)</label>
+                        <input asp-for="Stat4Label" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Label (Marathi)</label>
+                        <input asp-for="Stat4LabelMarathi" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card mb-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                    <div>
+                        <h3 style="margin:0;color:var(--navy)">Testimonials Section</h3>
+                        <p style="margin:4px 0 0;color:var(--text-mid)">Control the section heading. Card content comes from approved testimonials.</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input asp-for="ShowTestimonialsSection" class="form-check-input" type="checkbox" id="showTestimonialsSection" />
+                        <label class="form-check-label" for="showTestimonialsSection">Show on homepage</label>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Eyebrow (English)</label>
+                        <input asp-for="TestimonialsEyebrow" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Eyebrow (Marathi)</label>
+                        <input asp-for="TestimonialsEyebrowMarathi" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Title (English)</label>
+                        <input asp-for="TestimonialsTitle" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Title (Marathi)</label>
+                        <input asp-for="TestimonialsTitleMarathi" class="form-control" />
+                    </div>
+                </div>
+                <div class="alert alert-light mt-3 mb-0">
+                    Use the <a asp-action="Testimonials">Testimonials</a> page to edit each card's name, role, quote, rating, approval, and featured status.
+                </div>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn-primary-sk"><i class="fa-solid fa-save"></i>Save Homepage Settings</button>
+                <a asp-controller="Home" asp-action="Index" target="_blank" class="btn-outline-sk"><i class="fa-solid fa-globe"></i>Preview Website</a>
+            </div>
+        </form>
+    </div>
+</section>

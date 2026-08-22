@@ -1,0 +1,379 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Shivakala.Web
+build_property.RootNamespace = Shivakala.Web
+build_property.ProjectDir = /root/ERP/src/Shivakala.Web/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /root/ERP/src/Shivakala.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[/root/ERP/src/Shivakala.Web/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/AboutPageContent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWJvdXRQYWdlQ29udGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/AdminGallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWRtaW5HYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/AuditLog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQXVkaXRMb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/CourseForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ291cnNlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ291cnNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Enquiries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRW5xdWlyaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/HomePageContent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSG9tZVBhZ2VDb250ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/MaterialForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTWF0ZXJpYWxGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Materials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTWF0ZXJpYWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/NoticeForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTm90aWNlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Notices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTm90aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/PortalAccounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUG9ydGFsQWNjb3VudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Registrations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUmVnaXN0cmF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/ResetPortalPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUmVzZXRQb3J0YWxQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/ResultForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUmVzdWx0Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/StudentForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vU3R1ZGVudEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/StudentIdCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vU3R1ZGVudElkQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/TestimonialForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVGVzdGltb25pYWxGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/Testimonials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVGVzdGltb25pYWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Admin/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Attendance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Attendance/Mark.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9NYXJrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Attendance/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9SZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Attendance/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9fVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Batch/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmF0Y2gvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Batch/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmF0Y2gvRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Batch/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmF0Y2gvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Batch/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmF0Y2gvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Courses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Enquiry/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5xdWlyeS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Exam/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbS9Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Exam/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Exam/Marks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbS9NYXJrcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Exam/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbS9fVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Fee/Collect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmVlL0NvbGxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Fee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmVlL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Fee/Receipt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmVlL1JlY2VpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Fee/Structure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmVlL1N0cnVjdHVyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Fee/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmVlL19WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Gallery/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2FsbGVyeS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Homework/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZXdvcmsvRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Homework/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZXdvcmsvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Homework/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZXdvcmsvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/NoticeBoard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90aWNlQm9hcmQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/ParentPortal/Attendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0F0dGVuZGFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/ParentPortal/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0NoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/ParentPortal/Fees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0ZlZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/ParentPortal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/ParentPortal/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0xvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Registration/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0cmF0aW9uL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Results/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdWx0cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0FjY2Vzc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/Partials/_CourseCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19Db3Vyc2VDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/Partials/_FacultyCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19GYWN1bHR5Q2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/Partials/_FlashMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19GbGFzaE1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/Partials/_SectionHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19TZWN0aW9uSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/Partials/_TestimonialCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19UZXN0aW1vbmlhbENhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/StatusCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1N0YXR1c0NvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/StudyMaterial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZHlNYXRlcmlhbC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Teacher/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Teacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Teacher/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9fVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/Attendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9BdHRlbmRhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9DaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/ExamMarks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9FeGFtTWFya3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/Exams.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9FeGFtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/Homework.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9Ib21ld29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/TeacherPortal/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlclBvcnRhbC9fVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Testimonials/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVzdGltb25pYWxzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Timetable/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGltZXRhYmxlL0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Timetable/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGltZXRhYmxlL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Timetable/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGltZXRhYmxlL19WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/WhatsApp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2hhdHNBcHAvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/WhatsApp/_BroadcastForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2hhdHNBcHAvX0Jyb2FkY2FzdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/WhatsApp/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2hhdHNBcHAvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

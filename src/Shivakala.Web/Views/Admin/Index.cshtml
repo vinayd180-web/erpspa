@@ -1,0 +1,110 @@
+@{ ViewData["Title"] = "Admin Dashboard | SK Classes"; }
+
+<section class="page-hero" style="background:linear-gradient(135deg,var(--navy-dark),var(--navy-mid));padding:40px 0">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+                <h1 style="font-size:1.8rem;font-weight:800">👋 Welcome, Admin</h1>
+                <p style="opacity:.8">Shivakala Coaching Classes · @UtcDateTime.NowInAppTimeZone().ToString("dddd, dd MMMM yyyy")</p>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+                <a asp-controller="WhatsApp" asp-action="Index" class="btn-primary-sk" style="background:#075e54">
+                    <i class="fa-brands fa-whatsapp"></i> Broadcast
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="container">
+
+        <!-- ── Stats Row ── -->
+        <div class="row g-3 mb-4">
+            @{
+                var stats = new (string Icon, string Label, string Value, string Color)[]
+                {
+                    ("fa-users",            "Total Students",    $"{ViewBag.TotalStudents ?? 0}", "var(--blue)"),
+                    ("fa-chalkboard-teacher","Teachers",         $"{ViewBag.TotalTeachers ?? 0}", "var(--green)"),
+                    ("fa-layer-group",      "Active Batches",    $"{ViewBag.TotalBatches ?? 0}", "var(--gold)"),
+                    ("fa-indian-rupee-sign","Fees This Month",   $"₹ {((decimal?)(ViewBag.FeeThisMonth) ?? 0m):N0}", "var(--teal)"),
+                    ("fa-triangle-exclamation","Pending Fees",   $"₹ {((decimal?)(ViewBag.PendingFees) ?? 0m):N0}", "var(--red)"),
+                    ("fa-calendar-check",   "Attendance Today",  $"{ViewBag.AttendanceToday ?? 0}", "var(--purple)"),
+                };
+            }
+            @foreach (var s in stats)
+            {
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="admin-stat-card" style="border-left-color:@s.Color">
+                        <div style="font-size:1.4rem;color:@s.Color"><i class="fa-solid @s.Icon"></i></div>
+                        <strong>@s.Value</strong>
+                        <span>@s.Label</span>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- ── Module Nav Grid ── -->
+        <h5 class="mb-3" style="font-weight:700;color:var(--navy-dark)">Management Modules</h5>
+        <div class="row g-3 mb-4">
+            @{
+                var modules = new (string Icon, string Label, string Desc, string Ctrl, string Action, string Col)[]
+                {
+                    ("fa-users",            "Students",       "Admissions, profiles, ID cards",  "Registration",  "Index",  "#1a3a6b"),
+                    ("fa-chalkboard-teacher","Teachers",      "Staff, salary, photo upload",      "Teacher",       "Index",  "#155724"),
+                    ("fa-layer-group",      "Batches",        "Classes, allocation, strength",   "Batch",         "Index",  "#5a4e8e"),
+                    ("fa-calendar-check",   "Attendance",     "Daily marking, reports, %",        "Attendance",    "Index",  "#0d6efd"),
+                    ("fa-indian-rupee-sign","Fees",           "Collect, receipts, structure",     "Fee",           "Index",  "#9c6b00"),
+                    ("fa-file-pen",         "Exams",          "Schedule, marks, auto-rank",       "Exam",          "Index",  "#842029"),
+                    ("fa-book-open",        "Homework",       "Assign, attachments, submissions", "Homework",      "Index",  "#0f5132"),
+                    ("fa-calendar-week",    "Timetable",      "Weekly schedule, conflict check",  "Timetable",     "Index",  "#1a3a6b"),
+                    ("fa-bell",             "Notice Board",   "Announcements, circulars",         "NoticeBoard",   "Index",  "#5a4e8e"),
+                    ("fa-folder-open",      "Study Materials","Notes, PDFs, previous papers",     "StudyMaterial", "Index",  "#155724"),
+                    ("fa-image",            "Gallery",        "Photos, events, achievements",     "Gallery",       "Index",  "#0d6efd"),
+                    ("fa-star",             "Testimonials",   "Reviews, ratings",                 "Testimonials",  "Index",  "#9c6b00"),
+                    ("fa-question-circle",  "Enquiries",      "Admission queries, follow-ups",    "Enquiry",       "Index",  "#842029"),
+                    ("fa-brands fa-whatsapp","WhatsApp",      "Broadcast to parents & students",  "WhatsApp",      "Index",  "#075e54"),
+                };
+            }
+            @foreach (var mod in modules)
+            {
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a asp-controller="@mod.Ctrl" asp-action="@mod.Action"
+                       class="module-card" style="--mc:@mod.Col;text-decoration:none">
+                        <div class="mc-icon"><i class="fa-solid @mod.Icon"></i></div>
+                        <div class="mc-label">@mod.Label</div>
+                        <div class="mc-desc">@mod.Desc</div>
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- ── Recent Activity Row ── -->
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="glass-card h-100">
+                    <h6 class="mb-3" style="font-weight:700">📋 Recent Registrations</h6>
+                    <p class="text-muted small">Visit the <a asp-controller="Registration" asp-action="Index">Students</a> module to manage admissions.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="glass-card h-100">
+                    <h6 class="mb-3" style="font-weight:700">💬 Quick Broadcast</h6>
+                    <p class="text-muted small mb-3">Send an instant message to all parents.</p>
+                    <a asp-controller="WhatsApp" asp-action="Index" class="btn-primary-sk" style="background:#075e54;font-size:.82rem">
+                        <i class="fa-brands fa-whatsapp"></i> Open Broadcast Panel
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.module-card{display:block;background:var(--glass-bg);border:1px solid var(--border);border-radius:14px;padding:20px 16px;transition:all .2s;border-left:4px solid var(--mc)}
+.module-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.mc-icon{font-size:1.6rem;color:var(--mc);margin-bottom:8px}
+.mc-label{font-weight:700;font-size:.95rem;color:var(--navy-dark);margin-bottom:4px}
+.mc-desc{font-size:.75rem;color:#666}
+</style>
