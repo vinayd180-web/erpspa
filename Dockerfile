@@ -8,17 +8,22 @@ COPY src/Shivakala.Infrastructure/*.csproj src/Shivakala.Infrastructure/
 COPY src/Shivakala.PostgresMigrations/*.csproj src/Shivakala.PostgresMigrations/
 COPY src/Shivakala.SqlServerMigrations/*.csproj src/Shivakala.SqlServerMigrations/
 
-# Restore dependencies
+# Restore
 RUN dotnet restore src/Shivakala.Web/Shivakala.Web.csproj
 
-# Copy everything and publish
+# Copy everything
 COPY . .
+
+# Publish
 RUN dotnet publish src/Shivakala.Web/Shivakala.Web.csproj -c Release -o /app/publish
 
-# Runtime image
+# Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/publish .
+
+# Copy appsettings.json
+COPY src/Shivakala.Web/appsettings.json /app/appsettings.json
 
 # Create App_Data directory
 RUN mkdir -p /app/App_Data

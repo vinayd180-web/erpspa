@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/Shivakala.Web.props" />
-</Project>
