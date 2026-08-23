@@ -1,0 +1,75 @@
+@model IEnumerable<Shivakala.Core.Models.ExamPaper>
+@{
+    ViewData["Title"] = "Exam Papers";
+}
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <div class="container">
+        <div class="alert alert-warning text-center py-5">
+            <h3>🔒 Please Login to Access Papers</h3>
+            <p>You need to be logged in as a student to take tests.</p>
+            <a href="/Account/Login" class="btn btn-primary">Login Here</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>📝 My Exam Papers</h2>
+            @if (User.IsInRole("Admin") || User.IsInRole("Teacher"))
+            {
+                <a asp-action="Create" class="btn btn-primary">+ Create New Paper</a>
+            }
+        </div>
+
+        <div class="alert alert-info">
+            <i class="fas fa-user-graduate"></i> Welcome, <strong>@User.Identity.Name</strong>! 
+            @(User.IsInRole("Admin") ? "(Admin)" : User.IsInRole("Teacher") ? "(Teacher)" : "(Student)")
+        </div>
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+
+        <div class="row">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var paper in Model)
+                {
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">@paper.Title</h5>
+                                <p class="card-text text-muted">@paper.Description</p>
+                                <p><strong>Class:</strong> @paper.Class</p>
+                                <p><strong>Subject:</strong> @paper.Subject</p>
+                                <p><strong>Marks:</strong> @paper.TotalMarks | <strong>Duration:</strong> @paper.DurationMinutes min</p>
+                                <div class="btn-group">
+                                    <a asp-action="Preview" asp-route-id="@paper.Id" class="btn btn-sm btn-outline-primary">Preview</a>
+                                    <a asp-action="TakeTest" asp-route-id="@paper.Id" class="btn btn-sm btn-success">Take Test</a>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Teacher"))
+                                    {
+                                        <a asp-action="Delete" asp-route-id="@paper.Id" class="btn btn-sm btn-danger">Delete</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center py-5">
+                    <h4>No exam papers available</h4>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Teacher"))
+                    {
+                        <p>Click "Create New Paper" to add your first paper.</p>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+}

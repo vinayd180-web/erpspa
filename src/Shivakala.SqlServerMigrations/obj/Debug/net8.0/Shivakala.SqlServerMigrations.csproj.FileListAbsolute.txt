@@ -17,3 +17,4 @@
 /root/ERP/src/Shivakala.SqlServerMigrations/obj/Debug/net8.0/Shivakala.SqlServerMigrations.pdb
 /root/ERP/src/Shivakala.SqlServerMigrations/obj/Debug/net8.0/Shivakala.SqlServerMigrations.genruntimeconfig.cache
 /root/ERP/src/Shivakala.SqlServerMigrations/obj/Debug/net8.0/ref/Shivakala.SqlServerMigrations.dll
+/root/ERP/src/Shivakala.SqlServerMigrations/obj/Debug/net8.0/Shivakala.SqlServerMigrations.sourcelink.json

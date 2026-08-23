@@ -1,27 +1,25 @@
 services:
   - type: web
-    name: shivakala-whatsapp-sidecar
-    runtime: node
-    rootDir: whatsapp-sidecar
-    plan: starter
-    autoDeploy: false
-    buildCommand: npm install && npm run render-build
-    startCommand: npm start
-    healthCheckPath: /healthz
+    name: shree-parth-academy
+    runtime: image
+    plan: free
+    region: frankfurt
+    buildCommand: |
+      dotnet restore
+      dotnet publish -c Release -o out
+    startCommand: dotnet out/Shivakala.Web.dll
     envVars:
-      - key: NODE_VERSION
-        value: 20
-      - key: NODE_ENV
-        value: production
-      - key: WHATSAPP_PUPPETEER_HEADLESS
-        value: "true"
-      - key: WHATSAPP_API_KEY
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Database__Provider
+        value: PostgreSql
+      - key: DB_HOST
         sync: false
-      - key: WHATSAPP_AUTH_PATH
-        value: /var/data/whatsapp-auth
-      - key: PUPPETEER_EXECUTABLE_PATH
-        value: ""
-    disk:
-      name: whatsapp-auth
-      mountPath: /var/data
-      sizeGB: 1
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false

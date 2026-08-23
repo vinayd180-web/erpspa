@@ -9,6 +9,7 @@
 /root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.AssemblyInfoInputs.cache
 /root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.AssemblyInfo.cs
 /root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.csproj.CoreCompileInputs.cache
+/root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.sourcelink.json
 /root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakal.62F62953.Up2Date
 /root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/Shivakala.Infrastructure.dll
 /root/ERP/src/Shivakala.Infrastructure/obj/Debug/net8.0/refint/Shivakala.Infrastructure.dll

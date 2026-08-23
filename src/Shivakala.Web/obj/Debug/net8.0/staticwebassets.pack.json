@@ -25,6 +25,38 @@
       "PackagePath": "staticwebassets/img/ShivKalaLogo_backup.jpeg"
     },
     {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-128x128.png",
+      "PackagePath": "staticwebassets/img/icon-128x128.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-144x144.png",
+      "PackagePath": "staticwebassets/img/icon-144x144.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-152x152.png",
+      "PackagePath": "staticwebassets/img/icon-152x152.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-192x192.png",
+      "PackagePath": "staticwebassets/img/icon-192x192.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-384x384.png",
+      "PackagePath": "staticwebassets/img/icon-384x384.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-512x512.png",
+      "PackagePath": "staticwebassets/img/icon-512x512.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-72x72.png",
+      "PackagePath": "staticwebassets/img/icon-72x72.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/icon-96x96.png",
+      "PackagePath": "staticwebassets/img/icon-96x96.png"
+    },
+    {
       "Id": "/root/ERP/src/Shivakala.Web/wwwroot/img/placeholder-gallery.svg",
       "PackagePath": "staticwebassets/img/placeholder-gallery.svg"
     },
@@ -261,8 +293,36 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/manifest.json",
+      "PackagePath": "staticwebassets/manifest.json"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/sw.js",
+      "PackagePath": "staticwebassets/sw.js"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/gallery/5f84e938-f835-4895-ba04-2282fc6e07ee.png",
+      "PackagePath": "staticwebassets/uploads/gallery/5f84e938-f835-4895-ba04-2282fc6e07ee.png"
+    },
+    {
       "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/gallery/634877ee-ce92-427a-bfd7-388b883e4f56.jpeg",
       "PackagePath": "staticwebassets/uploads/gallery/634877ee-ce92-427a-bfd7-388b883e4f56.jpeg"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/homepage/97e3925487944eb4b86e54ccefa41b61.png",
+      "PackagePath": "staticwebassets/uploads/homepage/97e3925487944eb4b86e54ccefa41b61.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/homepage/f5b739fb519f435f939617b77de3b39f.png",
+      "PackagePath": "staticwebassets/uploads/homepage/f5b739fb519f435f939617b77de3b39f.png"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/homework/7ec8c354-bbbd-4f42-9564-6949f73d651c.html",
+      "PackagePath": "staticwebassets/uploads/homework/7ec8c354-bbbd-4f42-9564-6949f73d651c.html"
+    },
+    {
+      "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/teachers/435a539d-88af-4fed-8de7-86812f8be09f.jpg",
+      "PackagePath": "staticwebassets/uploads/teachers/435a539d-88af-4fed-8de7-86812f8be09f.jpg"
     },
     {
       "Id": "/root/ERP/src/Shivakala.Web/wwwroot/uploads/teachers/deeb0bea-dc52-418f-86b9-36abdcf14630.jpeg",

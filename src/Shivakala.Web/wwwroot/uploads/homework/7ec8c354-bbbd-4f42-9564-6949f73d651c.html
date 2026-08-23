@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11th Mathematics - Unit Test</title>
+    <!-- MathJax for beautiful matrix and determinant rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:#f2f6fc;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:30px 20px;font-family:'Segoe UI',Roboto,sans-serif}
+        .paper{max-width:900px;width:100%;background:#fff;padding:2.2rem 2.5rem 2.8rem;border-radius:28px;box-shadow:0 20px 40px -12px rgba(0,20,50,0.2);border:1px solid #d0ddef}
+        .school{text-align:center;border-bottom:3px double #1a2a4a;padding-bottom:0.8rem;margin-bottom:1rem}
+        .school h1{font-size:1.9rem;font-weight:700;color:#0a1a32;text-transform:uppercase}
+        .school h2{font-size:1.1rem;font-weight:500;color:#253b61}
+        .school .sub{font-size:.9rem;background:#e8effa;display:inline-block;padding:0.2rem 2rem;border-radius:40px;margin-top:5px}
+        .exam-meta{display:flex;justify-content:space-between;flex-wrap:wrap;background:#f7faff;padding:0.6rem 1.2rem;border-radius:40px;margin:1rem 0 1.4rem;font-weight:500;border:1px solid #cfddf2}
+        .exam-meta span{background:#fff;padding:0.2rem 1.2rem;border-radius:40px}
+        .marks-badge{background:#1a2a4a;color:#fff!important;font-weight:600}
+        .instructions{background:#f1f7fe;padding:0.7rem 1.2rem;border-radius:16px;margin-bottom:1.6rem;border-left:6px solid #2a4570;font-size:.9rem;line-height:1.7}
+        .section{margin-top:1.8rem}
+        .section h3{font-size:1.1rem;font-weight:700;color:#0f1f3b;background:#eef3fc;padding:0.25rem 1.2rem;border-radius:40px;display:inline-block;border:1px solid #c7d7ee;margin-bottom:0.6rem}
+        .question{display:flex;align-items:baseline;gap:8px;padding:0.4rem 0 0.4rem 0.8rem;border-bottom:1px dashed #d9e2f2;font-size:.95rem}
+        .question:last-child{border-bottom:none}
+        .q-marker{font-weight:600;color:#172a49;min-width:32px}
+        .q-marks{margin-left:auto;background:#e6edfb;padding:0.05rem 0.7rem;border-radius:30px;font-size:.7rem;font-weight:700;color:#17315c;white-space:nowrap}
+        .sub-q{margin-left:1.8rem;padding:0.3rem 0 0.3rem 0.8rem;border-bottom:1px dashed #e2eaf7;display:flex;align-items:baseline;gap:8px;font-size:.93rem}
+        .sub-q:last-child{border-bottom:none}
+        .sub-q .q-marker{min-width:44px;font-weight:500;color:#1d3860}
+        .sub-q .q-marks{background:#edf4fd}
+        .options{color:#2a4a6a;font-weight:400;padding-left:2rem}
+        .options li{list-style:lower-alpha;padding:1px 0}
+        .footer-note{margin-top:2rem;text-align:center;font-size:.8rem;border-top:2px solid #dae2f0;padding-top:1rem;display:flex;justify-content:space-between;flex-wrap:wrap}
+        .total-box{background:#f2f7ff;margin-top:1.4rem;padding:0.4rem 1.2rem;border-radius:40px;display:flex;justify-content:space-between;flex-wrap:wrap;border:1px solid #c0d2eb;font-weight:500}
+        .math-inline{display:inline-block;margin:0 2px}
+        .math-block{display:block;margin:6px 0 6px 20px}
+        @media print{body{background:#fff}.paper{box-shadow:none;border:1px solid #aaa}}
+        @media(max-width:600px){.paper{padding:1.2rem}.exam-meta{flex-direction:column;align-items:center;gap:4px}}
+    </style>
+</head>
+<body>
+<div class="paper">
+    <div class="school">
+        <h1>Aniruddha High School &amp; Jr College</h1>
+        <h2>Maharashtra State Board · 11th Science</h2>
+        <div class="sub">📐 Mathematics · Unit Test</div>
+    </div>
+    <div class="exam-meta">
+        <span>⏳ Time : 1 Hour</span>
+        <span>📝 Max Marks : <strong>25</strong></span>
+        <span class="marks-badge">⭐ Board Pattern</span>
+    </div>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong><br>
+        1. All questions are compulsory.<br>
+        2. Section A consists of 4 Multiple Choice Questions carrying 1 mark each.<br>
+        3. Section B consists of 3 Very Short Answer Questions carrying 1 mark each.<br>
+        4. Section C consists of 3 Short Answer Questions (Type I) carrying 2 marks each.<br>
+        5. Section D consists of 2 Short Answer Questions (Type II) carrying 3 marks each.<br>
+        6. Section E consists of 1 Long Answer Question carrying 4 marks.<br>
+        7. Use of neat and labeled diagrams is recommended wherever necessary.
+    </div>
+
+    <!-- SECTION A: MCQ -->
+    <div class="section">
+        <h3>SECTION A: MULTIPLE CHOICE QUESTIONS (1 MARK EACH)</h3>
+        
+        <div class="question"><span class="q-marker">Q1.</span><span>The angle \(60^\circ\) in radians is:</span><span class="q-marks">1</span></div>
+        <div class="options"><li>\(\frac{\pi}{2}\)</li><li>\(\frac{\pi}{3}\)</li><li>\(\frac{\pi}{4}\)</li><li>\(\frac{\pi}{6}\)</li></div>
+        
+        <div class="question"><span class="q-marker">Q2.</span><span>For a square matrix \(A\), if \(|A| = 0\), then the matrix is called:</span><span class="q-marks">1</span></div>
+        <div class="options"><li>Singular matrix</li><li>Non-singular matrix</li><li>Identity matrix</li><li>Symmetric matrix</li></div>
+        
+        <div class="question"><span class="q-marker">Q3.</span><span>If \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\), then \(|A|\) is:</span><span class="q-marks">1</span></div>
+        <div class="options"><li>2</li><li>-2</li><li>10</li><li>5</li></div>
+        
+        <div class="question"><span class="q-marker">Q4.</span><span>The length of an arc of a circle of radius \(r\) subtending angle \(\theta\) (in radians) is:</span><span class="q-marks">1</span></div>
+        <div class="options"><li>\(r\theta\)</li><li>\(r^2\theta\)</li><li>\(\frac{\theta}{r}\)</li><li>\(\frac{r}{\theta}\)</li></div>
+    </div>
+
+    <!-- SECTION B: VSA -->
+    <div class="section">
+        <h3>SECTION B: VERY SHORT ANSWER QUESTIONS (1 MARK EACH)</h3>
+        <div class="question"><span class="q-marker">Q5.</span><span>Convert \(45^\circ\) into radians.</span><span class="q-marks">1</span></div>
+        <div class="question"><span class="q-marker">Q6.</span><span>Find the value of \(\begin{vmatrix} 2 & 3 \\ 5 & 7 \end{vmatrix}\).</span><span class="q-marks">1</span></div>
+        <div class="question"><span class="q-marker">Q7.</span><span>If \(A = \begin{bmatrix} 1 & -2 \end{bmatrix}\) and \(B = \begin{bmatrix} 4 & 0 \end{bmatrix}\), find \(2A - 3B\).</span><span class="q-marks">1</span></div>
+    </div>
+
+    <!-- SECTION C: SA Type I -->
+    <div class="section">
+        <h3>SECTION C: SHORT ANSWER QUESTIONS - TYPE I (2 MARKS EACH)</h3>
+        <div class="question"><span class="q-marker">Q8.</span><span>Find the length of the arc of a circle of radius 7 cm subtending an angle of \(60^\circ\) at the centre.</span><span class="q-marks">2</span></div>
+        
+        <div class="question"><span class="q-marker">Q9.</span><span>Find the value of determinant: 
+        \(\begin{vmatrix} 2 & 3 & 1 \\ 4 & 5 & 2 \\ 1 & 2 & 3 \end{vmatrix}\)</span><span class="q-marks">2</span></div>
+        
+        <div class="question"><span class="q-marker">Q10.</span><span>If \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\), find \(AB\) and \(BA\).</span><span class="q-marks">2</span></div>
+    </div>
+
+    <!-- SECTION D: SA Type II -->
+    <div class="section">
+        <h3>SECTION D: SHORT ANSWER QUESTIONS - TYPE II (3 MARKS EACH)</h3>
+        <div class="question"><span class="q-marker">Q11.</span><span>
+            (a) Solve the system using matrix method: \(2x + 3y = 8\), \(x - y = 1\)<br>
+            (b) Find the area of a sector of radius 10 cm with angle \(45^\circ\).
+        </span><span class="q-marks">3</span></div>
+        
+        <div class="question"><span class="q-marker">Q12.</span><span>
+            (a) Find the angle between vectors \(\vec{a} = 2\hat{i} + 3\hat{j}\) and \(\vec{b} = \hat{i} - 2\hat{j}\).<br>
+            (b) If \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix}\), find \(A+B\) and \(A-B\).
+        </span><span class="q-marks">3</span></div>
+    </div>
+
+    <!-- SECTION E: LA -->
+    <div class="section">
+        <h3>SECTION E: LONG ANSWER QUESTION (4 MARKS)</h3>
+        <div class="question"><span class="q-marker">Q13.</span><span>
+            (a) Write the formula for the determinant of a \(3\times3\) matrix and find the determinant of 
+            \(A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}\).<br>
+            (b) If \(A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\), find \(A^2 - 2A + 3I\).<br>
+            (c) Explain the concept of singular and non-singular matrices with examples.
+        </span><span class="q-marks">4</span></div>
+    </div>
+
+    <div class="total-box"><span>📊 Total marks : 25</span><span>✓ All questions compulsory</span></div>
+    <div class="footer-note"><span>📖 Textual answers · Maharashtra Board</span><span>⏳ 1 Hour</span></div>
+</div>
+</body>
+</html>

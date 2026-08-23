@@ -1,0 +1,83 @@
+@model Shivakala.Core.Models.StudentTestAttempt
+@{
+    ViewData["Title"] = "Test Result";
+}
+
+<div class="container">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4>📊 Test Result</h4>
+        </div>
+        <div class="card-body">
+            <h5>Student: @Model.StudentName</h5>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card bg-light text-center">
+                        <div class="card-body">
+                            <h2>@Model.ObtainedMarks / @Model.TotalMarks</h2>
+                            <p>Total Score</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light text-center">
+                        <div class="card-body">
+                            <h2>@(Model.TotalMarks > 0 ? (Model.ObtainedMarks * 100 / Model.TotalMarks) : 0)%</h2>
+                            <p>Percentage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light text-center">
+                        <div class="card-body">
+                            <h2>@(Model.ObtainedMarks >= Model.TotalMarks / 2 ? "✅ Pass" : "❌ Fail")</h2>
+                            <p>Status</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <h5>Detailed Answers</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Correct Answer</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Answers != null && Model.Answers.Any())
+                    {
+                        @foreach (var answer in Model.Answers)
+                        {
+                            <tr>
+                                <td>Question @answer.QuestionId</td>
+                                <td><strong>@answer.Answer</strong></td>
+                                <td>@(answer.IsCorrect ? "✅ Correct" : "❌ Incorrect")</td>
+                                <td>
+                                    @if (answer.IsCorrect)
+                                    {
+                                        <span class="text-success">✅ Correct</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">❌ Incorrect</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr><td colspan="4" class="text-center">No answers found</td></tr>
+                    }
+                </tbody>
+            </table>
+
+            <a asp-action="Index" class="btn btn-secondary">Back to Papers</a>
+        </div>
+    </div>
+</div>

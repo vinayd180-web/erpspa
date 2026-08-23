@@ -153,8 +153,8 @@
 /root/ERP/src/Shivakala.Web/bin/Debug/net8.0/Shivakala.SqlServerMigrations.dll
 /root/ERP/src/Shivakala.Web/bin/Debug/net8.0/Shivakala.Core.pdb
 /root/ERP/src/Shivakala.Web/bin/Debug/net8.0/Shivakala.Infrastructure.pdb
-/root/ERP/src/Shivakala.Web/bin/Debug/net8.0/Shivakala.PostgresMigrations.pdb
 /root/ERP/src/Shivakala.Web/bin/Debug/net8.0/Shivakala.SqlServerMigrations.pdb
+/root/ERP/src/Shivakala.Web/bin/Debug/net8.0/Shivakala.PostgresMigrations.pdb
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.csproj.AssemblyReference.cache
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.Resources.Localization.SharedResource.en.resources
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.Resources.Localization.SharedResource.mr.resources
@@ -166,6 +166,7 @@
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.MvcApplicationPartsAssemblyInfo.cache
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.RazorAssemblyInfo.cache
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.RazorAssemblyInfo.cs
+/root/ERP/src/Shivakala.Web/obj/Debug/net8.0/Shivakala.Web.sourcelink.json
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/en/Shivakala.Web.resources.cs
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/en/Shivakala.Web.resources.dll
 /root/ERP/src/Shivakala.Web/obj/Debug/net8.0/mr/Shivakala.Web.resources.cs

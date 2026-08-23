@@ -17,3 +17,4 @@
 /root/ERP/src/Shivakala.PostgresMigrations/obj/Debug/net8.0/Shivakala.PostgresMigrations.pdb
 /root/ERP/src/Shivakala.PostgresMigrations/obj/Debug/net8.0/Shivakala.PostgresMigrations.genruntimeconfig.cache
 /root/ERP/src/Shivakala.PostgresMigrations/obj/Debug/net8.0/ref/Shivakala.PostgresMigrations.dll
+/root/ERP/src/Shivakala.PostgresMigrations/obj/Debug/net8.0/Shivakala.PostgresMigrations.sourcelink.json

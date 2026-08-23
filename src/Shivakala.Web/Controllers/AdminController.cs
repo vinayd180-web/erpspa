@@ -962,52 +962,56 @@ public sealed class AdminController(
 
     private static void NormalizeHomePageContent(HomePageContentAdminViewModel vm)
     {
-        vm.HeroBannerAltText = vm.HeroBannerAltText.Trim();
-        vm.TrendingEyebrow = vm.TrendingEyebrow.Trim();
-        vm.TrendingEyebrowMarathi = vm.TrendingEyebrowMarathi.Trim();
-        vm.TrendingTitle = vm.TrendingTitle.Trim();
-        vm.TrendingTitleMarathi = vm.TrendingTitleMarathi.Trim();
-        vm.TrendingDescription = vm.TrendingDescription.Trim();
-        vm.TrendingDescriptionMarathi = vm.TrendingDescriptionMarathi.Trim();
-        vm.TrendingAltText = vm.TrendingAltText.Trim();
-        vm.TrendingLinkText = vm.TrendingLinkText.Trim();
-        vm.TrendingLinkTextMarathi = vm.TrendingLinkTextMarathi.Trim();
-        vm.TrendingLinkUrl = vm.TrendingLinkUrl.Trim();
-        vm.Stat1Value = vm.Stat1Value.Trim();
-        vm.Stat1Label = vm.Stat1Label.Trim();
-        vm.Stat1LabelMarathi = vm.Stat1LabelMarathi.Trim();
-        vm.Stat2Value = vm.Stat2Value.Trim();
-        vm.Stat2Label = vm.Stat2Label.Trim();
-        vm.Stat2LabelMarathi = vm.Stat2LabelMarathi.Trim();
-        vm.Stat3Value = vm.Stat3Value.Trim();
-        vm.Stat3Label = vm.Stat3Label.Trim();
-        vm.Stat3LabelMarathi = vm.Stat3LabelMarathi.Trim();
-        vm.Stat4Value = vm.Stat4Value.Trim();
-        vm.Stat4Label = vm.Stat4Label.Trim();
-        vm.Stat4LabelMarathi = vm.Stat4LabelMarathi.Trim();
-        vm.TestimonialsEyebrow = vm.TestimonialsEyebrow.Trim();
-        vm.TestimonialsEyebrowMarathi = vm.TestimonialsEyebrowMarathi.Trim();
-        vm.TestimonialsTitle = vm.TestimonialsTitle.Trim();
-        vm.TestimonialsTitleMarathi = vm.TestimonialsTitleMarathi.Trim();
+        if (vm == null) return;
+        
+        vm.HeroBannerAltText = vm.HeroBannerAltText?.Trim() ?? string.Empty;
+        vm.TrendingEyebrow = vm.TrendingEyebrow?.Trim() ?? string.Empty;
+        vm.TrendingEyebrowMarathi = vm.TrendingEyebrowMarathi?.Trim() ?? string.Empty;
+        vm.TrendingTitle = vm.TrendingTitle?.Trim() ?? string.Empty;
+        vm.TrendingTitleMarathi = vm.TrendingTitleMarathi?.Trim() ?? string.Empty;
+        vm.TrendingDescription = vm.TrendingDescription?.Trim() ?? string.Empty;
+        vm.TrendingDescriptionMarathi = vm.TrendingDescriptionMarathi?.Trim() ?? string.Empty;
+        vm.TrendingAltText = vm.TrendingAltText?.Trim() ?? string.Empty;
+        vm.TrendingLinkText = vm.TrendingLinkText?.Trim() ?? string.Empty;
+        vm.TrendingLinkTextMarathi = vm.TrendingLinkTextMarathi?.Trim() ?? string.Empty;
+        vm.TrendingLinkUrl = vm.TrendingLinkUrl?.Trim() ?? "#";
+        vm.Stat1Value = vm.Stat1Value?.Trim() ?? string.Empty;
+        vm.Stat1Label = vm.Stat1Label?.Trim() ?? string.Empty;
+        vm.Stat1LabelMarathi = vm.Stat1LabelMarathi?.Trim() ?? string.Empty;
+        vm.Stat2Value = vm.Stat2Value?.Trim() ?? string.Empty;
+        vm.Stat2Label = vm.Stat2Label?.Trim() ?? string.Empty;
+        vm.Stat2LabelMarathi = vm.Stat2LabelMarathi?.Trim() ?? string.Empty;
+        vm.Stat3Value = vm.Stat3Value?.Trim() ?? string.Empty;
+        vm.Stat3Label = vm.Stat3Label?.Trim() ?? string.Empty;
+        vm.Stat3LabelMarathi = vm.Stat3LabelMarathi?.Trim() ?? string.Empty;
+        vm.Stat4Value = vm.Stat4Value?.Trim() ?? string.Empty;
+        vm.Stat4Label = vm.Stat4Label?.Trim() ?? string.Empty;
+        vm.Stat4LabelMarathi = vm.Stat4LabelMarathi?.Trim() ?? string.Empty;
+        vm.TestimonialsEyebrow = vm.TestimonialsEyebrow?.Trim() ?? string.Empty;
+        vm.TestimonialsEyebrowMarathi = vm.TestimonialsEyebrowMarathi?.Trim() ?? string.Empty;
+        vm.TestimonialsTitle = vm.TestimonialsTitle?.Trim() ?? string.Empty;
+        vm.TestimonialsTitleMarathi = vm.TestimonialsTitleMarathi?.Trim() ?? string.Empty;
     }
 
     private static void NormalizeAboutPageContent(AboutPageContentAdminViewModel vm)
     {
-        vm.Stat1Value = vm.Stat1Value.Trim();
-        vm.Stat1Label = vm.Stat1Label.Trim();
-        vm.Stat1LabelMarathi = vm.Stat1LabelMarathi.Trim();
-        vm.Stat2Value = vm.Stat2Value.Trim();
-        vm.Stat2Label = vm.Stat2Label.Trim();
-        vm.Stat2LabelMarathi = vm.Stat2LabelMarathi.Trim();
-        vm.Stat3Value = vm.Stat3Value.Trim();
-        vm.Stat3Label = vm.Stat3Label.Trim();
-        vm.Stat3LabelMarathi = vm.Stat3LabelMarathi.Trim();
-        vm.Stat4Value = vm.Stat4Value.Trim();
-        vm.Stat4Label = vm.Stat4Label.Trim();
-        vm.Stat4LabelMarathi = vm.Stat4LabelMarathi.Trim();
-        vm.Address = vm.Address.Trim();
-        vm.AddressMarathi = vm.AddressMarathi.Trim();
-        vm.MapEmbedUrl = vm.MapEmbedUrl.Trim();
+        if (vm == null) return;
+        
+        vm.Stat1Value = vm.Stat1Value?.Trim() ?? string.Empty;
+        vm.Stat1Label = vm.Stat1Label?.Trim() ?? string.Empty;
+        vm.Stat1LabelMarathi = vm.Stat1LabelMarathi?.Trim() ?? string.Empty;
+        vm.Stat2Value = vm.Stat2Value?.Trim() ?? string.Empty;
+        vm.Stat2Label = vm.Stat2Label?.Trim() ?? string.Empty;
+        vm.Stat2LabelMarathi = vm.Stat2LabelMarathi?.Trim() ?? string.Empty;
+        vm.Stat3Value = vm.Stat3Value?.Trim() ?? string.Empty;
+        vm.Stat3Label = vm.Stat3Label?.Trim() ?? string.Empty;
+        vm.Stat3LabelMarathi = vm.Stat3LabelMarathi?.Trim() ?? string.Empty;
+        vm.Stat4Value = vm.Stat4Value?.Trim() ?? string.Empty;
+        vm.Stat4Label = vm.Stat4Label?.Trim() ?? string.Empty;
+        vm.Stat4LabelMarathi = vm.Stat4LabelMarathi?.Trim() ?? string.Empty;
+        vm.Address = vm.Address?.Trim() ?? string.Empty;
+        vm.AddressMarathi = vm.AddressMarathi?.Trim() ?? string.Empty;
+        vm.MapEmbedUrl = vm.MapEmbedUrl?.Trim() ?? string.Empty;
     }
 
     private async Task<(Core.Entities.HomePageSectionSettings Settings, bool UsedFallback)> GetHomePageSectionSettingsAsync(CancellationToken ct)

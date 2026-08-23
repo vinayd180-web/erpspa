@@ -2,7 +2,7 @@
 @using System.Globalization
 @{
     ViewData["Title"] = "Home | Shree Parth Academy";
-    ViewData["MetaDescription"] = "Shree Parth Academy — 5th to 10th Standard. Admissions Open 2026-27. Strong Foundation Today, Brilliant Success Tomorrow!";
+    ViewData["MetaDescription"] = "Shree Parth Academy — 5th to 10th Standard | 11th & 12th Science | 11th & 12th Commerce. Admissions Open 2026-27. Strong Foundation Today, Brilliant Success Tomorrow!";
     var isMr = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "mr";
 }
 
@@ -10,12 +10,9 @@
 <section class="hero-banner">
     <div class="container">
         <div class="hero-main">
-            <!-- Homepage banner -->
             <div class="hero-kids-img">
                 <img src="@Model.HeroBannerImageUrl" alt="@Model.HeroBannerAltText" />
             </div>
-
-            <!-- Center content -->
             <div class="hero-center">
                 <div class="hero-admissions-badge">
                     <i class="fa-solid fa-graduation-cap me-2"></i>@(isMr ? "प्रवेश सुरू आहेत" : "ADMISSIONS OPEN")
@@ -24,12 +21,10 @@
                     @(isMr ? "२०२६" : "2026") <span>–</span> @(isMr ? "२७" : "27")
                 </div>
                 <div class="hero-standard-bar">
-                    @(isMr ? "5वी ते 10वी इयत्ता" : "5TH TO 10TH STANDARD")
+                    @(isMr ? "5वी ते 10वी | 11वी व 12वी विज्ञान | 11वी व 12वी वाणिज्य" : "5TH TO 10TH | 11TH & 12TH SCIENCE | 11TH & 12TH COMMERCE")
                 </div>
                 <p class="hero-tagline">
-                    @(isMr
-                        ? "भक्कम पाया आज, "
-                        : "Strong Foundation Today, ")
+                    @(isMr ? "भक्कम पाया आज, " : "Strong Foundation Today, ")
                     <span>@(isMr ? "उज्ज्वल यश उद्या!" : "Brilliant Success Tomorrow!")</span>
                 </p>
                 <div class="hero-cta-btns">
@@ -43,8 +38,6 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Right info boxes -->
             <div class="hero-right-info">
                 <div class="info-box">
                     <div class="info-icon"><i class="fa-solid fa-calendar-check"></i></div>
@@ -117,7 +110,7 @@
                 </div>
             </div>
 
-            <!-- Secondary -->
+            <!-- Secondary - Science -->
             <div class="course-col">
                 <div class="course-col-header navy">@(isMr ? "उच्च माध्यमिक (11वी – 12वी विज्ञान)" : "HIGHER SECONDARY (11TH – 12TH SCIENCE)")</div>
                 <div class="course-col-body">
@@ -296,7 +289,10 @@
                 @foreach (var stat in Model.Statistics)
                 {
                     <div class="col-6 col-md-3">
-                        <div class="stat-card reveal"><strong>@stat.Value</strong><span>@stat.Label</span></div>
+                        <div class="stat-card reveal">
+                            <strong>@stat.Value</strong>
+                            <span>@stat.Label</span>
+                        </div>
                     </div>
                 }
             </div>

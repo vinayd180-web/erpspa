@@ -5,6 +5,7 @@
 /root/ERP/src/Shivakala.Core/obj/Debug/net8.0/Shivakala.Core.AssemblyInfoInputs.cache
 /root/ERP/src/Shivakala.Core/obj/Debug/net8.0/Shivakala.Core.AssemblyInfo.cs
 /root/ERP/src/Shivakala.Core/obj/Debug/net8.0/Shivakala.Core.csproj.CoreCompileInputs.cache
+/root/ERP/src/Shivakala.Core/obj/Debug/net8.0/Shivakala.Core.sourcelink.json
 /root/ERP/src/Shivakala.Core/obj/Debug/net8.0/Shivakala.Core.dll
 /root/ERP/src/Shivakala.Core/obj/Debug/net8.0/refint/Shivakala.Core.dll
 /root/ERP/src/Shivakala.Core/obj/Debug/net8.0/Shivakala.Core.pdb

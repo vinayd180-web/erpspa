@@ -1,14 +1,14 @@
 @model IReadOnlyList<Shivakala.Core.ViewModels.TestimonialViewModel>
 @using System.Globalization
 @{
-    ViewData["Title"] = "Testimonials | Shivakala Coaching Classes";
+    ViewData["Title"] = "Testimonials | Shree Parth Academy";
     var isMr = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "mr";
 }
 <section class="page-hero" style="background:linear-gradient(135deg,var(--gold),var(--orange))">
     <div class="container">
         <span class="badge-soft"><i class="fa-solid fa-star me-1"></i>@(isMr ? "अभिप्राय" : "Testimonials")</span>
         <h1>@(isMr ? "पालक व विद्यार्थ्यांचे अनुभव" : "What Parents & Students Say")</h1>
-        <p>@(isMr ? "आमच्या विद्यार्थ्यांचे शब्द" : "Real stories from our Shivakala family")</p>
+        <p>@(isMr ? "आमच्या विद्यार्थ्यांचे शब्द" : "Real stories from our Shree Parth Academy family")</p>
     </div>
 </section>
 <section class="section-shell warm-section">

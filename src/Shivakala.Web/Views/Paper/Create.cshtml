@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Create Exam Paper";
+}
+
+<div class="container">
+    <h2>📝 Create Exam Paper</h2>
+    <hr />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <form method="post" action="/Paper/Create">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label class="form-label">Paper Title *</label>
+            <input type="text" name="Title" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" name="Description" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Class</label>
+            <input type="text" name="Class" class="form-control" placeholder="e.g. 10th" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Subject</label>
+            <input type="text" name="Subject" class="form-control" placeholder="e.g. Mathematics" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Paper Type</label>
+            <select name="PaperType" class="form-control">
+                <option value="MCQ">MCQ</option>
+                <option value="Subjective">Subjective</option>
+                <option value="Mixed">Mixed</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Total Marks</label>
+            <input type="number" name="TotalMarks" class="form-control" value="10" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Duration (Minutes)</label>
+            <input type="number" name="DurationMinutes" class="form-control" value="10" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Instructions</label>
+            <textarea name="Instructions" class="form-control" rows="2"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Questions</label>
+            <div class="card bg-light p-3">
+                <p class="text-muted small">
+                    <strong>MCQ Format:</strong> Question? | Option A | Option B | Option C | Option D | Correct Answer (Value)<br />
+                    <strong>Example:</strong> What is 2+2? | 3 | 4 | 5 | 6 | 4
+                </p>
+                <textarea name="questionsText" class="form-control" rows="5" placeholder="Enter questions here..." required></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Paper</button>
+        <a href="/Paper" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

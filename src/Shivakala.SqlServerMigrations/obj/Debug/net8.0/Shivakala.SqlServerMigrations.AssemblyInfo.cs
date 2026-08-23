@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shivakala.SqlServerMigrations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+103579aa22bfae25f20cdb505d0f03397c5adb24")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shivakala.SqlServerMigrations")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shivakala.SqlServerMigrations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

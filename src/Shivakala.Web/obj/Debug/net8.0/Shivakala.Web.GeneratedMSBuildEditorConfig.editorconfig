@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWJvdXQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/root/ERP/src/Shivakala.Web/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/root/ERP/src/Shivakala.Web/Views/Admin/AboutPageContent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWJvdXRQYWdlQ29udGVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -222,8 +226,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTm90aWNlQm9hcmQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/root/ERP/src/Shivakala.Web/Views/Paper/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFwZXIvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Paper/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFwZXIvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Paper/Preview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFwZXIvUHJldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Paper/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFwZXIvUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/Paper/TakeTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFwZXIvVGFrZVRlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/root/ERP/src/Shivakala.Web/Views/ParentPortal/Attendance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0F0dGVuZGFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/root/ERP/src/Shivakala.Web/Views/ParentPortal/Authenticate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFyZW50UG9ydGFsL0F1dGhlbnRpY2F0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/root/ERP/src/Shivakala.Web/Views/ParentPortal/ChangePassword.cshtml]

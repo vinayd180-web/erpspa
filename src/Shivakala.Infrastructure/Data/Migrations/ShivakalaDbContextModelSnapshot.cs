@@ -102,7 +102,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FullName")
@@ -119,7 +118,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("PasswordResetExpiry")
@@ -133,7 +131,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Role")
                         .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("StudentId")
@@ -144,16 +141,9 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.HasIndex("Username")
-                        .IsUnique();
 
                     b.ToTable("AppUsers");
                 });
@@ -195,8 +185,7 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.HasIndex("MarkedByTeacherId");
 
-                    b.HasIndex("StudentId", "BatchId", "Date", "Subject")
-                        .IsUnique();
+                    b.HasIndex("StudentId");
 
                     b.ToTable("Attendances");
                 });
@@ -262,7 +251,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Room")
@@ -313,12 +301,10 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(400)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DescriptionMarathi")
                         .IsRequired()
-                        .HasMaxLength(400)
                         .HasColumnType("TEXT");
 
                     b.Property<int>("DisplayOrder")
@@ -332,84 +318,23 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasMaxLength(80)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Standard")
                         .IsRequired()
-                        .HasMaxLength(80)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TitleMarathi")
                         .IsRequired()
-                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Slug")
-                        .IsUnique();
-
-                    b.ToTable("Courses", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Strong conceptual coaching for classes 8 to 10 with daily practice, tests, and mentorship.",
-                            DescriptionMarathi = "इयत्ता ८ वी ते १० वी साठी दैनंदिन सराव, चाचण्या आणि मार्गदर्शनासह मजबूत पाया घडवणारे प्रशिक्षण.",
-                            DisplayOrder = 1,
-                            DurationMonths = 12,
-                            IsFeatured = true,
-                            Slug = "foundation-batch",
-                            Standard = "8th - 10th",
-                            Title = "Foundation Batch",
-                            TitleMarathi = "फाउंडेशन बॅच"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Exam-focused batch for SSC students with revision plans, paper solving, and result tracking.",
-                            DescriptionMarathi = "एसएससी विद्यार्थ्यांसाठी पुनरावृत्ती योजना, पेपर सोडवणे आणि निकाल विश्लेषणासह परीक्षा-केंद्रित बॅच.",
-                            DisplayOrder = 2,
-                            DurationMonths = 10,
-                            IsFeatured = true,
-                            Slug = "board-excellence",
-                            Standard = "10th SSC",
-                            Title = "Board Excellence Program",
-                            TitleMarathi = "बोर्ड उत्कृष्टता कार्यक्रम"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Dedicated advanced coaching for Mathematics and Science with doubt-solving labs.",
-                            DescriptionMarathi = "गणित आणि विज्ञान विषयांसाठी विशेष शंका समाधान सत्रांसह प्रगत प्रशिक्षण.",
-                            DisplayOrder = 3,
-                            DurationMonths = 8,
-                            IsFeatured = true,
-                            Slug = "science-maths-mastery",
-                            Standard = "9th - 10th",
-                            Title = "Science & Maths Mastery",
-                            TitleMarathi = "सायन्स आणि मॅथ्स मास्टरी"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Reasoning, language, and aptitude sessions tailored for scholarship aspirants.",
-                            DescriptionMarathi = "शिष्यवृत्ती विद्यार्थ्यांसाठी रिझनिंग, भाषा आणि अॅप्टिट्यूडचे नियोजित मार्गदर्शन.",
-                            DisplayOrder = 4,
-                            DurationMonths = 6,
-                            IsFeatured = false,
-                            Slug = "scholarship-prep",
-                            Standard = "5th - 8th",
-                            Title = "Scholarship Preparation",
-                            TitleMarathi = "शिष्यवृत्ती तयारी"
-                        });
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("Shivakala.Core.Entities.Enquiry", b =>
@@ -435,22 +360,19 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Message")
                         .IsRequired()
-                        .HasMaxLength(600)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Mobile")
                         .IsRequired()
-                        .HasMaxLength(10)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Enquiries", (string)null);
+                    b.ToTable("Enquiries");
                 });
 
             modelBuilder.Entity("Shivakala.Core.Entities.Exam", b =>
@@ -535,10 +457,9 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentId");
+                    b.HasIndex("ExamId");
 
-                    b.HasIndex("ExamId", "StudentId")
-                        .IsUnique();
+                    b.HasIndex("StudentId");
 
                     b.ToTable("ExamResults");
                 });
@@ -550,7 +471,7 @@ namespace Shivakala.Infrastructure.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("CollectedByUserId")
                         .HasColumnType("INTEGER");
@@ -559,21 +480,21 @@ namespace Shivakala.Infrastructure.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Discount")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FeeType")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Fine")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Month")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("PaidAmount")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("PaidDate")
                         .HasColumnType("TEXT");
@@ -600,9 +521,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ReceiptNumber")
-                        .IsUnique();
-
                     b.HasIndex("StudentId");
 
                     b.ToTable("FeePayments");
@@ -619,7 +537,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Amount")
-                        .HasPrecision(10, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedDate")
@@ -997,7 +914,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasMaxLength(250)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AdminNotes")
@@ -1016,7 +932,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(150)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("EmergencyContact")
@@ -1024,7 +939,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Medium")
@@ -1032,7 +946,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Mobile")
                         .IsRequired()
-                        .HasMaxLength(10)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ParentEmail")
@@ -1055,7 +968,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Standard")
                         .IsRequired()
-                        .HasMaxLength(80)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Status")
@@ -1064,12 +976,11 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Subject")
                         .IsRequired()
-                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("Shivakala.Core.Entities.StudentBatch", b =>
@@ -1217,7 +1128,6 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
@@ -1228,11 +1138,10 @@ namespace Shivakala.Infrastructure.Data.Migrations
 
                     b.Property<string>("Mobile")
                         .IsRequired()
-                        .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal?>("MonthlySalary")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PhotoUrl")
                         .HasColumnType("TEXT");
@@ -1418,12 +1327,219 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.ToTable("TimetableSlots");
                 });
 
+            modelBuilder.Entity("Shivakala.Core.Models.ExamPaper", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Class")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DurationMinutes")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("ExamDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Instructions")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PaperType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TotalMarks")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExamPapers");
+                });
+
+            modelBuilder.Entity("Shivakala.Core.Models.Question", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CorrectAnswer")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ExamPaperId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Marks")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ModelAnswer")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OptionA")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OptionB")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OptionC")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OptionD")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("QuestionText")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("QuestionType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamPaperId");
+
+                    b.ToTable("Questions");
+                });
+
+            modelBuilder.Entity("Shivakala.Core.Models.StudentAnswer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Answer")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MarksObtained")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("StudentTestAttemptId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TeacherFeedback")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StudentTestAttemptId");
+
+                    b.ToTable("StudentAnswers");
+                });
+
+            modelBuilder.Entity("Shivakala.Core.Models.StudentTestAttempt", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ExamPaperId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ObtainedMarks")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StudentName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TotalMarks")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StudentTestAttempts");
+                });
+
             modelBuilder.Entity("Shivakala.Core.Entities.Attendance", b =>
                 {
                     b.HasOne("Shivakala.Core.Entities.Batch", "Batch")
                         .WithMany()
                         .HasForeignKey("BatchId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Shivakala.Core.Entities.Teacher", "MarkedByTeacher")
@@ -1433,7 +1549,7 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.HasOne("Shivakala.Core.Entities.Student", "Student")
                         .WithMany("Attendances")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Batch");
@@ -1480,7 +1596,7 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.HasOne("Shivakala.Core.Entities.Student", "Student")
                         .WithMany("ExamResults")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Exam");
@@ -1493,7 +1609,7 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.HasOne("Shivakala.Core.Entities.Student", "Student")
                         .WithMany("FeePayments")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Student");
@@ -1540,7 +1656,7 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.HasOne("Shivakala.Core.Entities.Batch", "Batch")
                         .WithMany("StudentBatches")
                         .HasForeignKey("BatchId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Shivakala.Core.Entities.Student", "Student")
@@ -1597,6 +1713,24 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.Navigation("Teacher");
                 });
 
+            modelBuilder.Entity("Shivakala.Core.Models.Question", b =>
+                {
+                    b.HasOne("Shivakala.Core.Models.ExamPaper", null)
+                        .WithMany("Questions")
+                        .HasForeignKey("ExamPaperId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Shivakala.Core.Models.StudentAnswer", b =>
+                {
+                    b.HasOne("Shivakala.Core.Models.StudentTestAttempt", null)
+                        .WithMany("Answers")
+                        .HasForeignKey("StudentTestAttemptId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Shivakala.Core.Entities.Batch", b =>
                 {
                     b.Navigation("BatchSubjects");
@@ -1627,6 +1761,16 @@ namespace Shivakala.Infrastructure.Data.Migrations
                     b.Navigation("HomeworkSubmissions");
 
                     b.Navigation("StudentBatches");
+                });
+
+            modelBuilder.Entity("Shivakala.Core.Models.ExamPaper", b =>
+                {
+                    b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("Shivakala.Core.Models.StudentTestAttempt", b =>
+                {
+                    b.Navigation("Answers");
                 });
 #pragma warning restore 612, 618
         }

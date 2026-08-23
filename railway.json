@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "dotnet Shivakala.Web.dll",
+    "healthcheckPath": "/",
+    "restartPolicyType": "ON_FAILURE",
+    "numReplicas": 1
+  }
+}

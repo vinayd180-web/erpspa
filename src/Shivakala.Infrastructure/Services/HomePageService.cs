@@ -33,7 +33,7 @@ public sealed class HomePageService(
                 Description = "Production-ready coaching website for Shivakala Coaching Classes with multilingual admissions and enquiry experience.",
                 Keywords = "Shivakala Coaching Classes, SSC coaching, foundation batch, scholarship preparation, Marathi coaching website"
             },
-            FeaturedCourses = featuredCourses,
+            FeaturedCourses = featuredCourses.ToList(),
             HeroBannerImageUrl = string.IsNullOrWhiteSpace(settings.HeroBannerImageUrl) ? "/img/Banner.jpeg" : settings.HeroBannerImageUrl,
             HeroBannerAltText = string.IsNullOrWhiteSpace(settings.HeroBannerAltText) ? "Shivakala Classes admissions banner" : settings.HeroBannerAltText,
             ShowTrendingBanner = settings.ShowTrendingBanner,

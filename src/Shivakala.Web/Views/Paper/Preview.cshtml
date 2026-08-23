@@ -1,0 +1,54 @@
+@model Shivakala.Core.Models.ExamPaper
+@{
+    ViewData["Title"] = "Preview - " + Model.Title;
+}
+
+<div class="container">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4>@Model.Title</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Class:</strong> @Model.Class</p>
+            <p><strong>Subject:</strong> @Model.Subject</p>
+            <p><strong>Total Marks:</strong> @Model.TotalMarks</p>
+            <p><strong>Duration:</strong> @Model.DurationMinutes minutes</p>
+            <p><strong>Instructions:</strong> @Model.Instructions</p>
+            <hr />
+            <h5>Questions</h5>
+            @if (Model.Questions != null && Model.Questions.Any())
+            {
+                <ol>
+                    @foreach (var q in Model.Questions.OrderBy(q => q.DisplayOrder))
+                    {
+                        <li>
+                            <p>@q.QuestionText <span class="badge bg-secondary">@q.Marks marks</span></p>
+                            @if (q.QuestionType == "MCQ")
+                            {
+                                <ul>
+                                    <li><strong>A)</strong> @q.OptionA</li>
+                                    <li><strong>B)</strong> @q.OptionB</li>
+                                    <li><strong>C)</strong> @q.OptionC</li>
+                                    <li><strong>D)</strong> @q.OptionD</li>
+                                </ul>
+                                <p><strong>Correct Answer:</strong> @q.CorrectAnswer</p>
+                            }
+                            else
+                            {
+                                <p><em>Subjective Answer</em></p>
+                            }
+                        </li>
+                    }
+                </ol>
+            }
+            else
+            {
+                <p>No questions added.</p>
+            }
+        </div>
+        <div class="card-footer">
+            <a asp-action="TakeTest" asp-route-id="@Model.Id" class="btn btn-success">Take Test</a>
+            <a asp-action="Index" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</div>

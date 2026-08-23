@@ -118,10 +118,10 @@
                         <div class="student-id-card" id="studentIdCard">
                             <div class="student-id-card__header">
                                 <div class="student-id-card__brand">
-                                    <img src="~/img/ShivKalaLogo.jpeg" asp-append-version="true" alt="Shivakala Coaching Classes logo" />
+                                    <img src="~/img/ShivKalaLogo.jpeg" asp-append-version="true" alt="Shree Parth Academy logo" />
                                     <div>
-                                        <div class="student-id-card__school">Shivakala Coaching Classes</div>
-                                        <div class="student-id-card__tag">Knowledge • Discipline • Success</div>
+                                        <div class="student-id-card__school">Shree Parth Academy</div>
+                                        <div class="student-id-card__tag">An Emperor of Knowledge</div>
                                     </div>
                                 </div>
                                 <div class="student-id-card__pill">Student ID</div>
@@ -136,7 +136,7 @@
                                     else
                                     {
                                         <div class="student-id-card__photo student-id-card__photo--fallback">
-                                            @(string.IsNullOrWhiteSpace(Model.FullName) ? "SK" : string.Concat(Model.FullName.Split(' ', StringSplitOptions.RemoveEmptyEntries).Take(2).Select(x => char.ToUpperInvariant(x[0]))))
+                                            @(string.IsNullOrWhiteSpace(Model.FullName) ? "SP" : string.Concat(Model.FullName.Split(' ', StringSplitOptions.RemoveEmptyEntries).Take(2).Select(x => char.ToUpperInvariant(x[0]))))
                                         </div>
                                     }
                                 </div>

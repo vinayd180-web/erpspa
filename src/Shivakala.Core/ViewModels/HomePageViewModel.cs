@@ -1,36 +1,51 @@
-namespace Shivakala.Core.ViewModels;
+using System.Collections.Generic;
 
-public sealed class HomePageViewModel
+namespace Shivakala.Core.ViewModels
 {
-    public SeoViewModel Seo { get; set; } = new();
-    public string HeroBannerImageUrl { get; set; } = "/img/Banner.jpeg";
-    public string HeroBannerAltText { get; set; } = "Shivakala Classes admissions banner";
-    public bool ShowTrendingBanner { get; set; }
-    public string TrendingEyebrow { get; set; } = "Trending Now";
-    public string TrendingTitle { get; set; } = "Admissions open for the new academic year";
-    public string TrendingDescription { get; set; } = "Highlight important announcements, batches, offers, or events right from the admin panel.";
-    public string TrendingImageUrl { get; set; } = "/img/Banner.jpeg";
-    public string TrendingAltText { get; set; } = "Trending banner for Shivakala Coaching Classes";
-    public string TrendingLinkText { get; set; } = "Explore Now";
-    public string TrendingLinkUrl { get; set; } = "/registration";
+    public class HomePageViewModel
+    {
+        public SeoViewModel Seo { get; set; }
 
-    public IReadOnlyList<CourseCardViewModel> FeaturedCourses { get; set; } = [];
+        // Hero Banner
+        public string HeroBannerImageUrl { get; set; }
+        public string HeroBannerAltText { get; set; }
 
-    public IReadOnlyList<StatisticViewModel> Statistics { get; set; } = [];
+        // Trending Banner
+        public bool ShowTrendingBanner { get; set; }
+        public string TrendingEyebrow { get; set; }
+        public string TrendingTitle { get; set; }
+        public string TrendingDescription { get; set; }
+        public string TrendingLinkText { get; set; }
+        public string TrendingLinkUrl { get; set; }
+        public string TrendingImageUrl { get; set; }
+        public string TrendingAltText { get; set; }
 
-    public bool ShowStatisticsSection { get; set; } = true;
+        // Statistics
+        public bool ShowStatisticsSection { get; set; } = true;
+        public List<StatViewModel> Statistics { get; set; } = new List<StatViewModel>();
 
-    public IReadOnlyList<HighlightViewModel> Highlights { get; set; } = [];
+        // Testimonials
+        public bool ShowTestimonialsSection { get; set; }
+        public string TestimonialsEyebrow { get; set; }
+        public string TestimonialsTitle { get; set; }
+        public List<TestimonialViewModel> Testimonials { get; set; }
 
-    public IReadOnlyList<HighlightViewModel> Results { get; set; } = [];
+        // Featured Courses
+        public List<CourseCardViewModel> FeaturedCourses { get; set; }
 
-    public IReadOnlyList<TestimonialViewModel> Testimonials { get; set; } = [];
+        // Highlights (using existing HighlightViewModel)
+        public List<HighlightViewModel> Highlights { get; set; }
 
-    public bool ShowTestimonialsSection { get; set; } = true;
+        // Results
+        public List<ResultViewModel> Results { get; set; }
 
-    public string TestimonialsEyebrow { get; set; } = "Testimonials";
+        // Faculty Members
+        public List<FacultyViewModel> FacultyMembers { get; set; }
+    }
 
-    public string TestimonialsTitle { get; set; } = "What Parents & Students Say";
-
-    public IReadOnlyList<FacultyMemberViewModel> FacultyMembers { get; set; } = [];
+    public class StatViewModel
+    {
+        public string Value { get; set; }
+        public string Label { get; set; }
+    }
 }

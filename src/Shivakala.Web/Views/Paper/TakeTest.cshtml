@@ -1,0 +1,73 @@
+@model Shivakala.Core.Models.ExamPaper
+@{
+    ViewData["Title"] = "Take Test - " + Model.Title;
+}
+
+<div class="container">
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h4>@Model.Title</h4>
+            <p><strong>Duration:</strong> @Model.DurationMinutes minutes</p>
+        </div>
+        <div class="card-body">
+            <p><strong>Instructions:</strong> @Model.Instructions</p>
+            <hr />
+
+            <form asp-action="SubmitTest" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="paperId" value="@Model.Id" />
+
+                <div class="mb-3">
+                    <label>Student Name</label>
+                    <input type="text" name="studentName" class="form-control" required placeholder="Enter your name" />
+                </div>
+
+                @if (Model.Questions != null && Model.Questions.Any())
+                {
+                    <ol>
+                        @foreach (var q in Model.Questions.OrderBy(q => q.DisplayOrder))
+                        {
+                            <li class="mb-4">
+                                <p><strong>@q.QuestionText</strong> <span class="badge bg-secondary">@q.Marks marks</span></p>
+                                @if (q.QuestionType == "MCQ")
+                                {
+                                    <div class="ms-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="answers[@q.Id]" value="A" id="q@(q.Id)_a" />
+                                            <label class="form-check-label" for="q@(q.Id)_a"><strong>A)</strong> @q.OptionA</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="answers[@q.Id]" value="B" id="q@(q.Id)_b" />
+                                            <label class="form-check-label" for="q@(q.Id)_b"><strong>B)</strong> @q.OptionB</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="answers[@q.Id]" value="C" id="q@(q.Id)_c" />
+                                            <label class="form-check-label" for="q@(q.Id)_c"><strong>C)</strong> @q.OptionC</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="answers[@q.Id]" value="D" id="q@(q.Id)_d" />
+                                            <label class="form-check-label" for="q@(q.Id)_d"><strong>D)</strong> @q.OptionD</label>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="ms-4">
+                                        <textarea name="answers[@q.Id]" class="form-control" rows="3" placeholder="Write your answer here..."></textarea>
+                                    </div>
+                                }
+                            </li>
+                        }
+                    </ol>
+                }
+                else
+                {
+                    <p>No questions found.</p>
+                }
+
+                <button type="submit" class="btn btn-success">Submit Test</button>
+                <a asp-action="Index" class="btn btn-secondary">Back</a>
+            </form>
+        </div>
+    </div>
+</div>
