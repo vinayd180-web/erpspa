@@ -2,7 +2,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Localization;
-using Shivakala.Infrastructure.Data.Seed;
+using Shivakala.Infrastructure.Data;
 using Shivakala.Infrastructure.Extensions;
 
 var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
@@ -18,38 +18,27 @@ if (!string.IsNullOrEmpty(databaseUrl))
         var database = uri.AbsolutePath.TrimStart('/');
         if (database.Contains("?")) database = database.Split('?')[0];
         var conn = $"Host={uri.Host};Port={uri.Port};Database={database};Username={username};Password={password};SSL Mode=Require;Trust Server Certificate=true;";
-
-        // FIX: sahi spelling ConnectionStrings
         Environment.SetEnvironmentVariable("ConnectionStrings__DefaultConnection", conn);
         Environment.SetEnvironmentVariable("ConnectionStrings__PostgreSql", conn);
         Environment.SetEnvironmentVariable("Database__Provider", "PostgreSql");
-        Console.WriteLine($"[Fix] DB parsed Host={uri.Host} DB={database} Port={uri.Port}");
+        Console.WriteLine($"[Fix] DB parsed Host={uri.Host} DB={database}");
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"[Fix] parse failed: {ex.Message}");
-    }
+    catch (Exception ex) { Console.WriteLine($"[Fix] parse failed: {ex.Message}"); }
 }
 
 var port = Environment.GetEnvironmentVariable("PORT")?? "8080";
-
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls($"http://+:{port}");
 
 var appDataPath = Path.Combine(builder.Environment.ContentRootPath, "App_Data");
 var dataProtectionPath = Path.Combine(appDataPath, "DataProtection-Keys");
-
 Directory.CreateDirectory(appDataPath);
 Directory.CreateDirectory(dataProtectionPath);
 
-builder.Services.AddDataProtection()
-   .PersistKeysToFileSystem(new DirectoryInfo(dataProtectionPath))
-   .SetApplicationName("ShivakalaCoaching");
-
+builder.Services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(dataProtectionPath)).SetApplicationName("ShivakalaCoaching");
 builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(x => x.MultipartBodyLengthLimit = 20 * 1024 * 1024);
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddInfrastructure(builder.Configuration);
-
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
     options.Cookie.Name = "Shivakala.Auth";
@@ -59,37 +48,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.SlidingExpiration = true;
     options.LoginPath = "/admin/login";
     options.AccessDeniedPath = "/access-denied";
-    options.Events = new CookieAuthenticationEvents
-    {
-        OnRedirectToLogin = ctx =>
-        {
-            var path = ctx.Request.Path.Value?? "";
-            if (path.StartsWith("/teacher", StringComparison.OrdinalIgnoreCase))
-            {
-                var ret = Uri.EscapeDataString(ctx.Request.Path + ctx.Request.QueryString);
-                ctx.Response.Redirect($"/teacher/login?returnUrl={ret}");
-            }
-            else if (path.StartsWith("/parent", StringComparison.OrdinalIgnoreCase))
-            {
-                var ret = Uri.EscapeDataString(ctx.Request.Path + ctx.Request.QueryString);
-                ctx.Response.Redirect($"/parent/login?returnUrl={ret}");
-            }
-            else { ctx.Response.Redirect(ctx.RedirectUri); }
-            return Task.CompletedTask;
-        },
-        OnRedirectToAccessDenied = ctx =>
-        {
-            var user = ctx.HttpContext.User;
-            if (user.IsInRole("Teacher")) { ctx.Response.Redirect("/teacher"); return Task.CompletedTask; }
-            if (user.IsInRole("Parent")) { ctx.Response.Redirect("/parent"); return Task.CompletedTask; }
-            ctx.Response.Redirect("/access-denied");
-            return Task.CompletedTask;
-        }
-    };
 });
 
 builder.Services.AddControllersWithViews().AddViewLocalization().AddDataAnnotationsLocalization();
-
 var supportedCultures = new[] { new CultureInfo("en"), new CultureInfo("mr") };
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
@@ -100,27 +61,15 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
 var app = builder.Build();
 
-// --- AUTO CREATE TABLES FIX ---
 using (var scope = app.Services.CreateScope())
 {
     try
     {
-        var db = scope.ServiceProvider.GetRequiredService<Shivakala.Infrastructure.Data.ShivakalaDbContext>();
+        var db = scope.ServiceProvider.GetRequiredService<ShivakalaDbContext>();
         db.Database.EnsureCreated();
-        Console.WriteLine("[Fix] Database EnsureCreated executed");
+        Console.WriteLine("[Fix] EnsureCreated OK - tables created");
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"[Fix] EnsureCreated failed: {ex.Message}");
-    }
-}
-
-
-// Seed / Migration handled in Infrastructure
-using (var scope = app.Services.CreateScope())
-{
-    try { await Shivakala.Infrastructure.Data.Seed.DbInitializer.InitializeAsync(scope.ServiceProvider); }
-    catch (Exception ex) { Console.WriteLine($"[Seed] failed: {ex.Message}"); }
+    catch (Exception ex) { Console.WriteLine($"[Fix] EnsureCreated failed: {ex.Message}"); }
 }
 
 app.UseRequestLocalization();
@@ -128,14 +77,5 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 app.Run();
-
-void EnsureDirectory(string path)
-{
-    if (!Directory.Exists(path)) Directory.CreateDirectory(path);
-}
