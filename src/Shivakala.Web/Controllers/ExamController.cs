@@ -20,15 +20,8 @@ public sealed class ExamController(
     [HttpGet("create")]
     public async Task<IActionResult> Create(CancellationToken ct)
     {
-        try
-        {
-            ViewBag.Batches = await batchRepo.GetAllAsync(ct);
-        }
-        catch
-        {
-            ViewBag.Batches = Array.Empty<Batch>();
-            ViewBag.PageLoadWarning = "Batch data is temporarily unavailable. You can still prepare the exam form.";
-        }
+        try { ViewBag.Batches = await batchRepo.GetAllAsync(ct); }
+        catch { ViewBag.Batches = Array.Empty<Batch>(); }
         return View("Form", new Exam { Title = "", Standard = "", Subject = "", ExamDate = UtcDateTime.StartOfToday() });
     }
 
@@ -45,36 +38,53 @@ public sealed class ExamController(
     [HttpGet("{id}/marks")]
     public async Task<IActionResult> Marks(int id, CancellationToken ct)
     {
-        try
-        {
-            var exam = await examRepo.GetByIdWithResultsAsync(id, ct);
-            if (exam is null) return NotFound();
-            ViewBag.Exam = exam;
-            return View(exam.Results);
-        }
-        catch
-        {
-            TempData["WarningMessage"] = "Exam marks could not be loaded right now.";
-            return RedirectToAction(nameof(Index));
-        }
+        var exam = await examRepo.GetByIdWithResultsAsync(id, ct);
+        if (exam is null) return NotFound();
+        ViewBag.Exam = exam;
+        return View(exam.Results);
     }
 
     [HttpPost("{id}/marks"), ValidateAntiForgeryToken]
-    public async Task<IActionResult> SaveMarks(int id,
-        [FromForm] Dictionary<int, int?> marks,
-        [FromForm] Dictionary<int, bool> absent,
-        CancellationToken ct)
+    public async Task<IActionResult> SaveMarks(int id, IFormCollection form, CancellationToken ct)
     {
         var exam = await examRepo.GetByIdWithResultsAsync(id, ct);
         if (exam is null) return NotFound();
 
-        var results = marks.Select(kvp => new ExamResult
+        var marksDict = new Dictionary<int, int?>();
+        var absentSet = new HashSet<int>();
+
+        foreach (var key in form.Keys)
+        {
+            if (key.StartsWith("marks[") && key.EndsWith("]"))
+            {
+                var sidStr = key.Substring(6, key.Length - 7);
+                if (int.TryParse(sidStr, out var sid))
+                {
+                    var val = form[key].ToString();
+                    if (int.TryParse(val, out var m)) marksDict[sid] = m;
+                    else marksDict[sid] = null;
+                }
+            }
+            if (key.StartsWith("absent[") && key.EndsWith("]"))
+            {
+                var sidStr = key.Substring(7, key.Length - 8);
+                if (int.TryParse(sidStr, out var sid)) absentSet.Add(sid);
+            }
+        }
+
+        var results = marksDict.Select(kvp => new ExamResult
         {
             ExamId = id,
             StudentId = kvp.Key,
-            MarksObtained = absent.GetValueOrDefault(kvp.Key) ? null : kvp.Value,
-            IsAbsent = absent.GetValueOrDefault(kvp.Key)
-        });
+            MarksObtained = absentSet.Contains(kvp.Key)? null : kvp.Value,
+            IsAbsent = absentSet.Contains(kvp.Key)
+        }).ToList();
+
+        foreach (var sid in absentSet.Where(s =>!marksDict.ContainsKey(s)))
+        {
+            results.Add(new ExamResult { ExamId = id, StudentId = sid, IsAbsent = true, MarksObtained = null });
+        }
+
         await examRepo.BulkUpsertResultsAsync(results, ct);
         await examRepo.RecalculateRanksAsync(id, ct);
         TempData["SuccessMessage"] = "Marks saved and ranks recalculated.";

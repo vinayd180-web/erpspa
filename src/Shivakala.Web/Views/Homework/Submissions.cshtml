@@ -1,0 +1,50 @@
+@using Shivakala.Core.Entities
+@model IEnumerable<HomeworkSubmission>
+@{
+    var hw = ViewBag.Homework as Homework;
+    ViewData["Title"] = $"Submissions - {hw?.Title}";
+    Layout = "_AdminLayout";
+}
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h3>@(hw?.Title ?? "Homework") - Submissions</h3>
+            <p class="text-muted mb-0">@(hw?.Standard) @(hw?.Subject) | Due: @hw?.DueDate.ToString("dd MMM yyyy") | Total: @(Model?.Count() ?? 0)</p>
+        </div>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+    <div class="card mt-4"><div class="card-body p-0">
+            @if (Model == null || !Model.Any())
+            {
+                <div class="p-5 text-center text-muted">No submissions yet</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                        <thead class="table-light">
+                            <tr><th>#</th><th>Student</th><th>Status</th><th>Submitted</th><th>File</th><th>Notes</th></tr>
+                        </thead>
+                        <tbody>
+                        @{ var i = 1; }
+                        @foreach (var s in Model)
+                        {
+                            <tr>
+                                <td>@(i++)</td>
+                                <td><strong>@(s.Student?.FullName ?? $"Student #{s.StudentId}")</strong><br/><small class="text-muted">ID: @s.StudentId</small></td>
+                                <td><span class="badge bg-primary">@s.Status</span></td>
+                                <td>@s.SubmittedAt.ToLocalTime().ToString("dd-MM-yyyy hh:mm")</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(s.FileUrl))
+                                    { <a href="@s.FileUrl" target="_blank" class="btn btn-sm btn-outline-primary">View</a> }
+                                    else { <span class="text-muted">-</span> }
+                                </td>
+                                <td><small>@(s.Notes ?? "-")</small></td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            }
+    </div></div>
+</div>
