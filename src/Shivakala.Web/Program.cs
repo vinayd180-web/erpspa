@@ -119,7 +119,7 @@ using (var scope = app.Services.CreateScope())
 // Seed / Migration handled in Infrastructure
 using (var scope = app.Services.CreateScope())
 {
-    try { await Shivakala.Infrastructure.Data.DbInitializer.InitializeAsync(scope.ServiceProvider); }
+    try { await Shivakala.Infrastructure.Data.Seed.DbInitializer.InitializeAsync(scope.ServiceProvider); }
     catch (Exception ex) { Console.WriteLine($"[Seed] failed: {ex.Message}"); }
 }
 
